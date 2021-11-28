@@ -34,10 +34,15 @@ function clearInputFields() {
 }
 
 function addBook() {
+  if(bookTitle.value !== "" && bookAuthor.value !== "") {
   const title = bookTitle.value;
   const author = bookAuthor.value;
   bookCollection.addBook(title, author);
   clearInputFields();
+}else{
+  const message = document.querySelector('.contact-message');
+  message.innerHTML = "Please enter book title and author ❌";
+}
 }
 
 // Display time and update it
