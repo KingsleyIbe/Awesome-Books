@@ -42,6 +42,7 @@ function addBook() {
 }else{
   const message = document.querySelector('.contact-message');
   message.innerHTML = "Please enter book title and author ❌";
+  setTimeout(() => message.classList.add('message-hidden'), 5000);
 }
 }
 
